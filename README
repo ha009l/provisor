@@ -1,0 +1,37 @@
+File for chat application
+
+
+A simple chat application implemented in Java using sockets. It consists of two main components: the server (ChatServer) and the client (ChatClient). The server allows multiple clients to connect simultaneously and communicate with each other in a chat room-like environment.
+
+Features
+- *Multiple Client Support*: The server supports multiple clients connected at the same time.
+- *Unique Client IDs*: Each client is assigned a unique ID when connecting.
+- *Broadcast*: Messages sent by any client are broadcast to all other connected clients.
+- *Error Handling*: Basic error handling is implemented to handle I/O exceptions and prevent duplicate messages.
+
+the use
+Server (chat server)
+1. Compile the file "ChatServer.java": "javac ChatServer.java".
+2. Run the compiled ChatServer class: java ChatServer.
+3. The server will start and listen for incoming client connections on port 12345.
+
+ Client (chat client)
+1. Compile the "ChatClient.java" file: "javac ChatClient.java".
+2. Run the compiled "ChatClient" class: "java ChatClient".
+3. The client will connect to the server running on “localhost” and port “12345”.
+4. Enter your messages at the console prompt and press Enter to send them to the server.
+
+Communications protocol
+- The server assigns a unique ID to each client when they connect.
+- Messages sent by clients are prefixed with their IDs before broadcast.
+- The client receives messages from the server and displays them in the console.
+
+requirements
+- Java Development Kit (JDK) installed on your system.
+
+Notes
+- Server and client classes must run on separate stations or instances.
+- To connect clients across different devices, modify the server address in the ChatClient constructor to the IP address or hostname of the device running the server.
+
+license
+This project is licensed under the MIT License.
